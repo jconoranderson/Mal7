@@ -396,12 +396,27 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Responsive */
 @media (max-width: 992px) {
-    .split-grid, .insights-grid { grid-template-columns: 1fr; }
+    .principals-grid, .split-grid, .insights-grid { grid-template-columns: 1fr; gap: 2rem; }
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    .specialization-badges {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 3rem;
+    }
 }
 @media (max-width: 768px) {
     .services-grid, .insights-cards { grid-template-columns: 1fr; }
     .nav-links { display: none; }
     .hero-headline { font-size: 2.5rem; }
     .hero-actions { flex-direction: column; width: 100%; }
+    .specialization-badges {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .specialization-badges {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
